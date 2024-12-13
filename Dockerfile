@@ -4,11 +4,8 @@ FROM python:3.9-slim
 #Set the working directory
 WORKDIR /app
 
-#Copy the requirements
-COPY requirements.txt ./
-
-#And install them
-RUN pip install -r requirements.txt
+#Install flask
+RUN pip install flask
 
 #Copy application code and database schemas
 COPY . .

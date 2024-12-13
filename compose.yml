@@ -1,9 +1,6 @@
-version: '3.8'
-
 services:
-  users-app:
-    build:
+  web:
+    build: .
     ports:
       - "5003:5003"
-    volumes:
-      - "./:/app"
+    image: "flask:alpine"
